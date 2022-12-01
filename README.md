@@ -2,7 +2,7 @@
  
 Give yourself a sense of purpose, while making New York City communities happy.
 
-## Key technologies, packages, and gems
+## Key Technologies, Packages, and Gems
 
 •Front end <br>
 Daisy-UI
