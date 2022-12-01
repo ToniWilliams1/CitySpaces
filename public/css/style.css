@@ -341,6 +341,7 @@ label{
 
 header{
     margin-bottom: 5%;
+    font-family: 'Nerko One', cursive;
 
 }
 
@@ -409,6 +410,31 @@ p{
     color: green;
     font-family: 'Nerko One', cursive;
 
+}
+
+.div1 {
+  font-family: 'Nerko One', cursive;
+text-align: center;
+  width: 45%;
+  float: left;
+}
+
+.div2 {
+  font-family: 'Nerko One', cursive;
+text-align: center;
+  width: 45%;
+  float: right;
+}
+
+.why{
+
+}
+
+section {
+  color: black;
+  padding-top: 50px;
+  padding-right: 80px;
+  text-align: center;
 }
 
 .btnhome{

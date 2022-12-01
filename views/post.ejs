@@ -1,14 +1,9 @@
 <%- include('partials/header') -%>
 <link href="https://cdn.jsdelivr.net/npm/daisyui@2.40.1/dist/full.css" rel="stylesheet" type="text/css" />
-
   <div class="container">
-    <h1><%= post.userName %></h1>
-    <h2>
-      <%= post.title %>
-    </h2>
+    <h1 class="text-5xl font-bold"><%= post.userName %></h1>
     <div class="row justify-content-center mt-5">
       <div class="col-6">
-        
         <img class="img-fluid" src="<%= post.image%>" />
         <div class="row justify-content-between">
           <form class="col-1" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
@@ -28,10 +23,6 @@
           <%= post.caption %>
         </p>
       </div>
-
-      
-
-
       <div class="container">
         <div class="row justify-content-center mt-5">
           <ul class="row list-unstyled">
@@ -39,27 +30,21 @@
               <% if (comment[i].deleted == false){ %>
               <li class="col-6 justify-content-between mt-5">
                 <%= comment[i].comment %>
-
                   <form class="col-1" action="/comment/likeComment/<%= comment[i]._id %>?_method=PUT" method="POST">
-
                     <button class="btn btn-primary fa fa-heart" type="submit"></button>
                     <input type="hidden" name="postid" value="<%= post.id %>">
                   </form>
-
                   <%if(post.user==user.id){ %>
                     <form action="/comments/deleteComment/<%= comment[i].id %>?_method=PUT" method="POST" class="col-3">
                       <button class="btn btn-primary fa fa-trash" type="submit"></button>
                       <input type="hidden" name="postid" value="<%= post.id %>">
                     </form>
                     <%}%>
-
                   <h3 class="col-3">Likes: <%= comment[i].likes %>
                   </h3>
-                  
               </li>
               <% } %>
               <% } %>
-              
           </ul>
         </div>
       </div>
@@ -73,7 +58,7 @@
             <label for="comment" class="form-label">Comment</label>
             <input type="text" class="form-control" id="comment" name="comment">
           </div>
-          <button type="submit" class="btn btn-success"> Submit</button>
+          <button type="submit" class="btn btn-sucess"> Submit</button>
         </form>
       </div>
 
@@ -81,7 +66,7 @@
 
       <div class="col-6 mt-5">
         <a class="btn btn-sucess href="/profile">Return to Profile</a>
-        <a class="btn btn-success" href="/feed">Return to Feed</a>
+        <a class="btn btn-sucess" href="/feed">Return to Feed</a>
       </div>
     </div>
   </div>

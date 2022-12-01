@@ -21,6 +21,7 @@ router.post("/signup", authController.postSignup);
 router.get("/todos", todosController.getTodos);
 router.get("/events", eventsController.getEvents);
 router.get("/about", aboutController.getAbout);
+router.get("/like-event/:id", eventsController.likeEvent);
 
 
 

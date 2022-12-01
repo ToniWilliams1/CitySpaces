@@ -10,19 +10,33 @@
               <p>Email Address: <%= user.email %></p>
                 Events Attended: 
                  My Reflections: <%=user.posts%>
-              </p>
-              
+              </p> 
           </div>
+      </div>      
       </div>
-     
-          
-      </div>
-
       <div class="col-6">
-        <h1>Saved Events</h1>
-
+        <h1 class="text-5xl font-bold">Saved Events</h1>
+        <% user.watching.forEach(data => { %>
+          <div class="card w-96  ">
+            <div class="card-body">
+              <form
+              class="col-1"
+              action="/like-event/<%= data.opportunity_id %>" 
+              method="GET"
+            >
+              <button class="btn btn-error fa-solid fa-trash" type="submit"></button>
+            </form>
+              <h2 class="card-title"> <em><%= %></h2>
+                  <p class="card-title"> <em><%= user.watching.data %></p>
+                  <div class="card-actions justify-end">
+     <p><%= data.borough %></p>
+              <h2>  <%=data.summary %></h2>
+  <a href="<%= data.display_url %>"><%=data.category_desc %></a>
+                  </div>
+            </div>
+          </div>
+        <% }) %>
         <ul class="row list-unstyled">
-        
         </ul>
         <div class="row justify-content-center mt-5">
           <a class="btn" href="/events">Add <i class="fa-solid fa-plus"></i> </a>

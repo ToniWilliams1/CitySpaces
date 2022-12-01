@@ -1,7 +1,7 @@
 <%- include('partials/header') -%>
 
 <body>
-<h1>Opportunities</h1>
+<h1 class="text-5xl font-bold">Opportunities</h1>
     <div class="input-group">
       <select class="select select-bordered bg-base-content">
         <option disabled selected>Filter </option>
@@ -24,13 +24,11 @@
           <div class="card-body">
             <form
             class="col-1"
-            action="/events/likeEvent/<%= data.id %>?_method=PUT"
-            method="POST"
+            action="/like-event/<%= data.opportunity_id %>" 
+            method="GET"
           >
-            <button class="btn btn-primary fa fa-heart" type="submit"></button>
+            <button class="btn btn-warning fa fa-bookmark" type="submit"></button>
           </form>
-            <i class="fa-solid fa-heart"></i>
-              <button type="submit" class="bg-success-content"><i class="fa-regular fa-bookmark"></i> </button>
             <h2 class="card-title"> <em><%= %></h2>
                 <p class="card-title"> <em><%= data.recurrence_type %></p>
                 <div class="card-actions justify-end">
