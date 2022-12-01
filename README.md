@@ -8,13 +8,15 @@ Give yourself a sense of purpose, while making people happy.
 Daisy-UI
 
 • Back end <br>
- ![NYC Service - Volunteer Opportunities Database] (https://data.cityofnewyork.us/Social-Services/NYC-Service-Volunteer-Opportunities-Database/btdp-kset)
+ [NYC Service - Volunteer Opportunities Database] (https://data.cityofnewyork.us/Social-Services/NYC-Service-Volunteer-Opportunities-Database/btdp-kset)
 
 ## Core Features
- Users will enter the name of a drink and recieve instructions and measurements for the drink.
+ Users will log in to the app where they can filter through 600+ volumnteer opportunities across categories such as health, education, and environment.
+ Users can save the events they plan to attend, and mark the ones they've attended as "complete".
+ Once marked complete, the user can faciliate a reflection discussion about the project they completed.
 
 ## Start App
-Get an [API key](https://www.thecocktaildb.com/).
+Get an [API key](https://opendata.cityofnewyork.us/).
 
 Clone the repo git clone https://github.com/toniwilliams1/CitySpaces.git
 
