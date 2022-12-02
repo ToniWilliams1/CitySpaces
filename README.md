@@ -5,7 +5,11 @@ Give yourself a sense of purpose, while making New York City communities happy.
 ## Key Technologies, Packages, and Gems
 
 •Front end <br>
-Daisy-UI
+HTML <br>
+CSS <br>
+JavaScript <br>
+Tailwind <br>
+DaisyUI
 
 •Back end <br>
 Node.js / Express.js <br>
@@ -14,7 +18,6 @@ Cloudinary <br>
 Mongo DB <br>
 Mongoose <br>
 Multer
-
 [NYC Service - Volunteer Opportunities Database](https://data.cityofnewyork.us/Social-Services/NYC-Service-Volunteer-Opportunities-Database/btdp-kset)
 
 ## Core Features
