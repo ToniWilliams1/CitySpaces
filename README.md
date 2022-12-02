@@ -9,6 +9,7 @@ Daisy-UI
 
 •Back end <br>
 Node.js / Express.js <br>
+JavaScript <br>
 Cloudinary <br>
 Mongo DB <br>
 
