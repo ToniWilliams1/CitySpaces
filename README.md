@@ -12,6 +12,7 @@ Node.js / Express.js <br>
 JavaScript <br>
 Cloudinary <br>
 Mongo DB <br>
+Mongoose
 
 [NYC Service - Volunteer Opportunities Database](https://data.cityofnewyork.us/Social-Services/NYC-Service-Volunteer-Opportunities-Database/btdp-kset)
 
