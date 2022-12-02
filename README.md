@@ -17,7 +17,7 @@ JavaScript <br>
 Cloudinary <br>
 Mongo DB <br>
 Mongoose <br>
-Multer
+Multer <br>
 [NYC Service - Volunteer Opportunities Database](https://data.cityofnewyork.us/Social-Services/NYC-Service-Volunteer-Opportunities-Database/btdp-kset)
 
 ## Core Features
