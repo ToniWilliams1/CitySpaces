@@ -4,14 +4,14 @@ Give yourself a sense of purpose, while making New York City communities happy.
 
 ## Key Technologies, Packages, and Gems
 
-•Front end <br>
+• Front end <br>
 HTML <br>
 CSS <br>
 JavaScript <br>
 Tailwind <br>
 DaisyUI
 
-•Back end <br>
+• Back end <br>
 Node.js / Express.js <br>
 JavaScript <br>
 Cloudinary <br>
@@ -47,6 +47,6 @@ Clone the repo git clone https://github.com/toniwilliams1/CitySpaces.git
 
 NPM Start
 
-## [Demo](https://luxebar.netlify.app/).
+## [Demo](https://luxebar.netlify.app/)
 <img src="https://user-images.githubusercontent.com/100317017/204971083-44b43493-0ea7-457f-a6a0-a0b736904d5e.png">
 
