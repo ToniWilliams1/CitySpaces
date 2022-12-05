@@ -8,7 +8,7 @@ Give yourself a sense of purpose, while making New York City communities happy.
 HTML <br>
 CSS <br>
 JavaScript <br>
-Tailwind <br>
+Tailwind CSS <br>
 DaisyUI
 
 • Back end <br>
