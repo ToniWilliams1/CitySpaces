@@ -13,15 +13,15 @@ DaisyUI
 
 • Back end <br>
 Node.js / Express.js <br>
-JavaScript <br>
 Cloudinary <br>
 Mongo DB <br>
 Mongoose <br>
 Multer <br>
+Passport
 [NYC Service - Volunteer Opportunities Database](https://data.cityofnewyork.us/Social-Services/NYC-Service-Volunteer-Opportunities-Database/btdp-kset)
 
 ## Core Features
- Users will log in to the app where they can filter through 600+ volunteer opportunities across categories such as health, education, and environment. <br>
+Users will log in to the app where they can filter through 600+ volunteer opportunities across categories such as health, education, and environment. <br>
 
 Users can save the events they plan to attend, and mark the ones they've attended as "complete". <br>
 
