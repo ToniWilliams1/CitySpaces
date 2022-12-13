@@ -1,0 +1,29 @@
+<%- include('partials/header') -%>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@2.40.1/dist/full.css" rel="stylesheet" type="text/css" />
+
+<h1>Live and historic data,</h1>
+<div class="col-6">
+    <% arrayOfCoins.forEach(coin => {%>  
+      <div class="card w-96 glass">
+        <div class="card-body">
+          <h2 class="card-title"><%=coin.name %> (<%=coin.symbol %>) </h2>
+          <p>Rank: <strong> <%=coin.rank %> </strong></p>
+          <p>Price: <strong><%=coin.price %></strong></p>
+          <p>Market Cap: <strong><%=coin.market_cap %> </strong></p>
+          <p>Volume 24H:<strong> <%=coin.volume_24h %></strong> </p>
+          <p>Delta 24H:<strong> <%=coin.volume_24h %></strong></p>
+
+          <div class="card-actions justify-end">
+        <form class="col-1" >
+              <button class="btn btn-primary fa fa-heart"  action="/markets/saveCoin/<%= coin.id %>?_method=PUT" method="POST" type="submit"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <% }) %>
+    <div class="row justify-content-center mt-5">
+      <a class="btn btn-primary" href="/feed">Return to Feed</a>
+    </div>  
+  </div> 
+  <%- include('partials/footer') -%>

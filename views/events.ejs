@@ -1,0 +1,50 @@
+<%- include('partials/header') -%>
+
+<body>
+<h1>Opportunities</h1>
+    <div class="input-group">
+      <select class="select select-bordered bg-base-content">
+        <option disabled selected>Filter </option>
+       <button><a href="/about"> <option>Education</option></a></button>
+        <option>Environment</option>
+        <option>Health</option>
+        <option>Helping Neighbors in Need</option>
+        <option>Moving, lifting, and rearranging</option>
+        <option>Strengthening Communities</option>
+      </select>
+      <button class="btn gap-2">
+  ALL OPPORTUNITIES
+        <div class="badge"><%=arrayOfData.length %></div>
+      </button>
+      <button class="btn gap-2">
+       </button>
+       </div>
+    <% arrayOfData.forEach(data => { %>
+        <div class="card w-96  ">
+          <div class="card-body">
+            <form
+            class="col-1"
+            action="/events/likeEvent/<%= data.id %>?_method=PUT"
+            method="POST"
+          >
+            <button class="btn btn-primary fa fa-heart" type="submit"></button>
+          </form>
+            <i class="fa-solid fa-heart"></i>
+              <button type="submit" class="bg-success-content"><i class="fa-regular fa-bookmark"></i> </button>
+            <h2 class="card-title"> <em><%= %></h2>
+                <p class="card-title"> <em><%= data.recurrence_type %></p>
+                <div class="card-actions justify-end">
+   <p><%= data.borough %></p>
+            <h2>  <%=data.summary %></h2>
+<a href="<%= data.display_url %>"><%=data.category_desc %></a>
+                </div>
+          </div>
+        </div>
+      <% }) %>
+      <div class="btn-group">
+        <button class="btn">«</button>
+        <button class="btn">Page 22</button>
+        <button class="btn">»</button>
+      </div>
+  </body>
+</html>

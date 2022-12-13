@@ -1,0 +1,34 @@
+<%- include('partials/header') -%>
+
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-6">
+        <div class="card">
+          <img src="#" alt="">
+          <h2>Good night, <%=user.userName %>!</h2>
+          <div class="cont">
+              <p>Email Address: <%= user.email %></p>
+                Events Attended: 
+                 My Reflections: <%=user.posts%>
+              </p>
+              
+          </div>
+      </div>
+     
+          
+      </div>
+
+      <div class="col-6">
+        <h1>Saved Events</h1>
+
+        <ul class="row list-unstyled">
+        
+        </ul>
+        <div class="row justify-content-center mt-5">
+          <a class="btn" href="/events">Add <i class="fa-solid fa-plus"></i> </a>
+        </div>  
+      </div>  
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') -%>

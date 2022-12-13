@@ -1,0 +1,41 @@
+{
+  "name": "binary-upload-boom",
+  "version": "1.0.0",
+  "description": "100Devs Social Network",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.1",
+    "bootstrap": "^5.2.2",
+    "cloudinary": "^1.25.1",
+    "connect-mongo": "^3.2.0",
+    "D": "^1.0.0",
+    "daisyui": "^2.41.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.1",
+    "faker": "^6.6.6",
+    "install": "^0.13.0",
+    "method-override": "^3.0.0",
+    "mongodb": "^3.6.5",
+    "mongoose": "^5.13.15",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.6.0",
+    "passport-coinbase": "^0.1.4",
+    "passport-local": "^1.0.0",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "tailwindcss": "^3.2.4"
+  }
+}

@@ -1,0 +1,67 @@
+<%- include('partials/header') -%>
+
+<h1>Reflections</h1>
+<p>What did you do? (in brief)
+  What did you learn and how did you feel about it? (in depth)
+  What are your hopes for the future? / How can you apply what you have learned in your life?</p>
+  <div class="mainDiv">
+    <!--title-->
+      <div class="title">
+        <a href="#">
+             <i class="fa fa-pencil" aria-hidden="true"></i>
+        Share Your Reflection</a>
+        </div>
+    <div id="body">
+      <!--img and textarea-->
+      <div class="imtcontainer">
+        <div class="img">
+        </div>
+        <div class="textarea">
+          <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="caption" name="caption" placeholder="Caption"></textarea>
+            </div>
+            <!-- <div class="mb-3">
+              <input type="file" class="form-control" id="imageUpload" name="file" placeholder="Image">
+            </div> -->
+            <div class="icons">
+              <div class="photos">
+               <a href="#">
+               Photo/Video <i class="fa fa-picture-o" aria-hidden="true"></i></a>
+             </div>
+             <button type="submit" class="btn btn-primary" value="Upload">Submit</button> 
+             <div class="title">
+              <a href="#">
+
+         </a>
+              </div>
+            </div>  
+
+      </div>
+    </div>
+    </div>
+    </div> 
+    </div>
+      </div>  
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <ul class="row list-unstyled">
+      <% for(var i=0; i<posts.length; i++) {%>
+        <li class="col-6 justify-content-between mt-5">
+          <a href="/post/<%= posts[i]._id%>">
+            <img class="img-fluid" src="<%= posts[i].image%>">
+          </a>
+        </li>
+      <% } %>
+      </ul>
+  </div>
+</div>  
+<script src="js/main.js"></script>
+
+<%- include('partials/footer') -%>

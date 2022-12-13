@@ -1,0 +1,616 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html{
+    background-color: gray;
+}
+.mainDiv{
+    width: 100%;
+ background-color: #fff;
+ margin: 50px auto;
+ border-radius: 3px;
+ position: relative;
+
+}
+
+.title{
+ width: 100%;
+ height: 33px;
+ background-color: #f6f7f9;
+ border-bottom: 1px solid #dddfe2;
+ border-radius: 2px 2px 0 0;
+ font-size: 15.5px;
+ font-family: 'Nerko One', cursive;
+ color: green;
+
+}
+.title p{
+ margin-right: 5px;
+ margin-top: 3px;
+ float: right;
+ padding: 3px 7px;
+ border-radius: 50%;
+}
+.title p:hover{
+     background-color: #ddd;
+} 
+
+.title a:first-of-type{
+     height: 14px;
+     padding:4px 6px 4px 4px;
+     color: #4b4f56;
+}
+.title a:nth-of-type(2) i{
+     height: 14px;
+     padding:4px 2px 4px 4px;
+     color: #4b4f56;
+}
+.title a i{
+ padding: 3px;
+}
+
+/*image and text container*/
+
+.imtcontainer{
+ width: 100%;
+ /*min-height: 71px;*/
+ border: 1px solid transparent;
+ border-radius: 3px;
+ background-color: #fff;
+ font-family: 'Nerko One', cursive;
+}
+
+.imtcontainer >.img{
+ float: left;
+ width: 40px;
+ height: 40px;
+ background-color: #eee;
+ margin: 8px 1px 0 8px;
+ display: inline-block;
+ border: 1px solid transparent;
+ font-family: 'Nerko One', cursive;
+
+}
+.imtcontainer >.img img{
+ width: 100%;
+ height: 100%;
+}
+
+.imtcontainer >.textarea{
+ display: inline-block;
+ background-color: #fff;
+ width: 90%;
+}
+
+.imtcontainer >.textarea textarea{
+display: flex;
+ margin-top: 8px;
+ width: 100%;
+ /*min-height: 90%;*/
+ text-align: left;
+ padding: 10px;
+ border: none;
+ resize:none;
+ font-size: 16px;
+}
+
+.imtcontainer >.textarea textarea:focus{
+   border:none ;
+   outline: none;
+}
+
+
+.line{
+ position: relative;
+ margin: 1px auto;
+ width:100%;
+ border-top: 1px solid #e9ebee;
+ text-align: left;
+ padding-top: 1px;
+background-color:#fff;
+}
+
+.line span{
+ border-radius: 50px;
+ padding: 11px;
+ margin-bottom: 5px;
+ margin-left: 5px;
+ display: none;
+ z-index: 10;
+ border: 1px solid #fff;
+}
+
+.line span:active{
+ outline:5px #333;
+}
+
+.line i{
+ position: absolute;
+ top: -18px;
+ right: 5px;
+ color: #4b4f56;
+}
+.line .colors{
+ display: inline-block;
+   visibility: hidden;
+}
+
+/*icons*/
+
+.icons{
+ width: 100%;
+ padding-left: 10px;
+ border:1px solid transparent;
+ background-color: #fff;
+}
+
+.photos , .feeling , .more , .checkin, .tagfriend, .back, .live{
+ text-indent: 5px;
+ margin-top: 6px;
+ line-height: 32px;
+ display: inline-block;
+ height: 32px;
+ border-radius: 50px;
+ background-color: #f6f7f9;
+ padding: 0px 6px 0px 3px;
+ transition: all .0s ease-in-out;
+}
+.photos a , .feeling a , .checkin a , .tagfriend a, .back a, .live a {
+ color: #333;
+ font-weight: bold;
+ font-size: 13.8px;
+}
+.photos i{
+ color: #8bbf50;
+}
+
+.feeling i{
+ color: #f6d16f
+}
+.more{
+ padding: 0px 10px 0px 10px;
+ text-indent: 0;
+ line-height: 30px;
+ }
+.more span{
+ border-radius: 50px;
+ display: block;
+ padding: 2.5px;
+ background-color: #a7aab1
+}
+
+.photos:hover , .feeling:hover , .more:hover, .checkin:hover, .tagfriend:hover, .back:hover, .live:hover{
+background-color:#dddfe2;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+
+.btn-wrap{
+	text-align:center;
+	width: 200px;
+	margin:0 auto;
+    display:
+}
+label{
+  padding-bottom:10px;
+  display:block;
+}
+.login-btn,
+.login-btn1 {
+	background-color: transparent;
+  display: block;
+  width:100%;
+  font-family: 'Nerko One', cursive;
+
+  cursor:pointer;
+	background-image: none;
+    display: block;
+	padding: 8px 50px;
+  margin-bottom:20px;
+	border-radius: 0;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.5, 1.65, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.5, 1.65, 0.37, 0.66);
+}
+.login-btn {
+	color: green;
+}
+.login-btn:focus,
+.login-btn:hover,
+.login-btn:active {
+  background-color: brown;
+  color: #FFF;
+  box-shadow: inset 196px 0 0 0 #7692A7;
+}
+.login-btn1:focus,
+.login-btn1:hover,
+.login-btn1:active{
+  background-color: brown;
+  color: #FFF;
+}
+
+
+.login-btn1{
+	position: relative;
+}
+.login-btn1:before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  background: #7692A7;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left 0;
+  transform-origin: left 0 ;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.5, 1.65, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.5, 1.65, 0.37, 0.66);
+}
+.login-btn1:hover:before,
+.login-btn1:focus:before{
+	-webkit-transform: scaleX(1);
+   transform: scaleX(1);
+}
+
+.clicked{
+ height: 290px;
+ background-color: #fff
+}
+
+.area{
+ min-height: 117px;
+}
+
+.opwidth{
+ width: 49%;
+ margin-left: 5x;
+}
+
+.inline{
+ display: inline-block!important;
+}
+.visible{
+ visibility: visible!important;
+}
+
+
+.login-with-google-btn {
+    transition: background-color .3s, box-shadow .3s;
+    padding: 12px 16px 12px 42px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+    
+    color: #757575;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: 12px 11px;
+    
+    &:hover {
+      box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .25);
+    }
+    
+    &:active {
+      background-color: #eeeeee;
+    }
+    
+    &:focus {
+      outline: none;
+      box-shadow: 
+        0 -1px 0 rgba(0, 0, 0, .04),
+        0 2px 4px rgba(0, 0, 0, .25),
+        0 0 0 3px #c8dafc;
+    }
+    
+    &:disabled {
+      filter: grayscale(100%);
+      background-color: #ebebeb;
+      box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+      cursor: not-allowed;
+    }
+  }
+  
+  
+
+.div.card.w-96.glass {
+    display: table;
+}
+
+.footer{
+    font-family: 'Nerko One', cursive;
+    color: white;
+}
+
+header{
+    margin-bottom: 5%;
+
+}
+
+#cityspace{
+color: green;
+}
+
+.login{
+    margin-left: 50%;
+	transform: translateX(200%);
+	opacity: 0;
+    text-align: center;
+	animation: slide-in-anim 2.5s ease-out forwards;
+    color: green;   
+}
+
+
+h1, .btn2{
+    color: green;
+    font-family: 'Nerko One', cursive;
+    text-align: center;
+	font-size: 60px;
+	padding: 0;
+	margin: 0;
+	margin-left: 50%;
+	transform: translateX(-200%);
+	opacity: 0;
+    text-align: center;
+	animation: slide-in-anim 1.5s ease-out forwards;
+}
+
+.btn2{
+    font-size: 30px;
+    border: 2px solid black;
+}
+
+@keyframes slide-in-anim {
+	20% {
+		opacity: 0;
+	}
+	60% {
+		transform: translateX(-45%);
+	}
+	75% {
+		transform: translateX(-52%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(-50%);
+	}
+}
+
+
+h2{
+    font-family: 'Nerko One', cursive;
+  
+}
+
+p{
+    font-family: 'Nerko One', cursive;
+  
+}
+
+
+.btn{
+    color: green;
+    font-family: 'Nerko One', cursive;
+
+}
+
+.btnhome{
+    margin-top: 15%;
+}
+.card {
+    width: 15%;
+    grid-template-columns: 200px 200px 200px;
+    float: left;
+    display: grid;
+    margin-right: 2%; 
+    font-family: 'Bodoni Moda', serif;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 15px 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 250px;
+    padding-bottom: 15px;
+    background-color: white;
+}
+
+.card img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: linear-gradient(60deg,  #14671D);
+    padding: 5px;
+    margin-top: -45px;
+}
+
+.card h2{
+    margin: 10px 0;
+}
+
+.cont{
+    width: 90%;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.6s ease;
+}
+
+.card .cont .link i{
+    font-size: 25px;
+    color: white
+    transition: all 0.2s ease;
+}
+
+.card .cont .link i:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.card:hover > .cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 150px;
+}
+
+.card:hover > .link{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+img{
+	width: 100%;
+}
+.login {
+    height: 1000px;
+    width: 100%;
+    position: relative;
+    font-family: 'Nerko One', cursive;
+
+}
+.login_box {
+    width: 1050px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+}
+.login_box .left{
+  width: 41%;
+  height: 100%;
+  padding: 25px 25px;
+  
+}
+.login_box .right{
+  width: 59%;
+  height: 100%  
+}
+.left .top_link a {
+    color: green
+    font-weight: 400;
+}
+.left .top_link{
+  height: 20px
+}
+.left .contact{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
+    width: 73%;
+    margin: auto;
+}
+.left h3{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.left input {
+    border: none;
+    width: 80%;
+    margin: 15px 0px;
+    border-bottom: 1px solid green;
+    padding: 7px 9px;
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Nerko One', cursive;
+
+}
+.left{
+	background: linear-gradient(-45deg, #dcd7e0, #fff);
+}
+.submit {
+    border: none;
+    padding: 15px 70px;
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+    margin-top: 120px;
+    font-family: 'Nerko One', cursive;
+    background: green;
+    color: #fff;
+    font-weight: bold;
+    -webkit-box-shadow: 0px 9px 15px -11px green;
+    -moz-box-shadow: 0px 9px 15px -11px green;
+    box-shadow: 0px 9px 15px -11px green;
+}
+
+
+
+.right {
+	background-image: ("/imgs/twovolunteers.jpg");
+	color: #fff;
+	position: relative;
+
+}
+
+.right .right-text{
+  height: 100%;
+  position: relative;
+  transform: translate(0%, 45%);
+}
+.right-text h2{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+}
+.right-text h5{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.right .right-inductor{
+  position: absolute;
+  width: 70px;
+  height: 7px;
+  background: #fff0;
+  left: 50%;
+  bottom: 70px;
+  transform: translate(-50%, 0%);
+}
+.top_link img {
+    width: 28px;
+    padding-right: 7px;
+    margin-top: -3px;
+}
+
+
+
+
+

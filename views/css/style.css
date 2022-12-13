@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu{
+    font-family: 'Bodoni Moda', serif;
+}
+
+header{
+    margin-bottom: 5%;
+    font-family: 'Bodoni Moda', serif;
+    color: brown;
+
+}
+
+p{
+    color: blue;
+    font-family: 'Bodoni Moda', serif;
+}
+footer, .flex-none{
+    font-family: 'Bodoni Moda', serif;
+
+}
+
+.card {
+    font-family: 'Bodoni Moda', serif;
+    flex: 33.33%;
+    height: 200px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.index{
+    width: 40%;
+    float: left;
+}
+
+h1{
+    font-size: 20%;
+}
+
+.login{
+    
+}
