@@ -18,8 +18,8 @@ router.post("/login", authController.postLogin);
 router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
-router.get("/todos", todosController.getTodos);
-router.get("/events", eventsController.getEvents);
+router.get("/todos", ensureAuth, todosController.getTodos);
+router.get("/events", ensureAuth, eventsController.getEvents);
 router.get("/about", aboutController.getAbout);
 router.get("/like-event/:id", eventsController.likeEvent);
 
