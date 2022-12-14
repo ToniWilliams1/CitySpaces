@@ -1,4 +1,4 @@
-# Co op City Spaces
+# City Spaces
  
 Give yourself a sense of purpose, while making New York City communities happy.
 
