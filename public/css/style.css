@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 
-html{
-    background-color: gray;
-}
+
+
 .mainDiv{
     width: 100%;
  background-color: #fff;
@@ -14,6 +13,44 @@ html{
  position: relative;
 
 }
+.navbar{
+  font-family: 'Nerko One', cursive;
+color: brown;
+}
+
+
+.boxes {
+  background: white;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.div1 {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 45%;
+  float: left;
+  font-family: 'Nerko One', cursive;
+  text-align: center;
+
+}
+
+.div2 {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 45%;
+  float: right;
+  font-family: 'Nerko One', cursive;
+text-align: center;
+}
+
+.index{
+  background: #14671D;
+  color: black;
+text-align: center;
+}
+
 
 .title{
  width: 100%;
@@ -332,6 +369,49 @@ label{
 
 .div.card.w-96.glass {
     display: table;
+}
+
+.left{
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.right{
+
+  margin-top: 35px;
+  margin-right: 5px;
+}
+
+.left-img{
+
+  width: 60px;
+}
+
+.right-img{
+
+  width: 180px;
+  border-radius: 20px;
+}
+
+.date{
+  font-size: 14px;
+  color: rgba(0,0,0,0.5);
+  font-weight: bold;
+}
+
+.city{
+  font-size: 21px;
+  color: rgba(0,0,0,0.7);
+  padding-top: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.tempreture{
+  padding-top: 10px;
+  font-size: 61px;
+  color: rgba(0,0,0,0.9);
+  font-weight: 100;
 }
 
 .footer{
