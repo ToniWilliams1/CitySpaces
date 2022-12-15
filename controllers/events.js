@@ -15,7 +15,7 @@ const User = require("../models/User");
       likeEvent: async (req, res) => {
         try {
 const user = await User.findById(req.user._id)
-          user.watching.push(req.params.id);
+          user.watching.push(req.params.id, req.params.title);
           await user.save()
           console.log("watching");
           res.redirect("/profile");

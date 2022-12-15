@@ -10,31 +10,31 @@
     27&deg;
   </div>
 </div>
-
-
 <div class="container">
   <div class="row mt-5">
       <div class="col-6">
         <div class="card">
-          <img src="#" alt="">
           <h2>Welcome, <%=user.userName %>!</h2>
           <div class="cont">
               <p>Email Address: <%= user.email %></p>
-                Events Attended: 
-                 My Reflections: <%=user.posts%>
+                Saved Events: <%= user.watching.length %>
+                <div class="date">
+                  Thursday, 8 December 2022
+                </div>
+                <div class="city">
+                  New York City
+                </div>
               </p> 
           </div>
       </div>      
       </div>
       <div class="col-6">
-<<<<<<< HEAD
-        <h1 class="text-5xl font-bold">Saved Events</h1>
+        <h1 class="text-5xl font-bold">Saved Events   </h1>      <div class="badge"><%=user.watching.length %></div>
         <% user.watching.forEach(data => { %>
           <div class="card w-96  ">
             <div class="card-body">
               <form
               class="col-1"
-              action="/like-event/<%= data.opportunity_id %>" 
               method="GET"
             >
               <button class="btn btn-error fa-solid fa-trash" type="submit"></button>
@@ -42,24 +42,10 @@
               <h2 class="card-title"> <em><%= %></h2>
                   <p class="card-title"> <em><%= user.watching.data %></p>
                   <div class="card-actions justify-end">
-     <p><%= data.borough %></p>
-              <h2>  <%=data.summary %></h2>
-  <a href="<%= data.display_url %>"><%=data.category_desc %></a>
                   </div>
             </div>
           </div>
         <% }) %>
-=======
-        <button class="btn gap-2">
-         SAVED OPPORTUNITIES
-                <div class="badge"></div>
-               
-              </button>
-              <button class="btn gap-2">
-                1
-               </button>
-               </div>
->>>>>>> ba58f5e (created events)
         <ul class="row list-unstyled">
         </ul>
         <div class="row justify-content-center mt-5">
