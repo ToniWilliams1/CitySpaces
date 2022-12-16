@@ -4,25 +4,31 @@
     <h1 class="text-5xl font-bold"><%= post.userName %>'s Post</h1>
     <div class="row justify-content-center mt-5">
       <div class="col-6">
-        <img class="img-fluid" src="<%= post.image%>" />
+        <img class="post-img" src="<%= post.image%>" />
         <div class="row justify-content-between">
           <form class="col-1" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
-            <button class="btn btn-primary fa fa-heart" type="submit"></button>
+            <button class="btn btn-success fa fa-heart" type="submit"></button>
           </form>
-          <div class="badge badge-md col-3"> <i class="fa-thin fa-heart"></i><%= post.likes %> likes
-          </div>
+          <%if(post.likes > 1)  {%>
+            <p class="likes"><%=post.likes %> likes</p>
+             <%}else {%>
+              <p class="likes"><%=post.likes %> like</p>
+              <% } %>
           <%if(post.user==user.id){ %>
             <form action="/post/deletePost/<%= post.id %>?_method=DELETE" method="POST" class="col-3">
               <button class="btn btn-error fa fa-trash" type="submit"></button>
             </form>
             <%}%>
+            <p class="description">
+              Title <%= post.title %>
+             </p>
+             <p class="description">
+              Caption <%= post.caption %>
+             </p>
+             <p class="post-time"><%=post.createdAt %></p>
         </div>
       </div>
       <div class="col-3 mt-5">
-        <h1>T</h1>
-        <p>
-          <%= post.caption %>
-        </p>
       </div>
       <div class="container">
         <div class="row justify-content-center mt-5">
@@ -41,7 +47,7 @@
                       <input type="hidden" name="postid" value="<%= post.id %>">
                     </form>
                     <%}%>
-                  <h3 class="col-3">Likes: <%= comment[i].likes %>
+                  <h3 class="likes">Likes: <%= comment[i].likes %>
                   </h3>
               </li>
               <% } %>
@@ -49,22 +55,20 @@
           </ul>
         </div>
       </div>
-
 <!-- Comments Section -->
       
       <div class="mt-5">
-        <h2>Add a comment</h2>
+        <h2>Add a Comment</h2>
         <form action="/comments/createComment/<%= post.id %>" method="POST">
           <div class="mb-3">
-            <label for="comment" class="form-label">Comment</label>
-            <input type="text" class="form-control" id="comment" name="comment">
+            <label for="comment" class="form-label" ></label>
+            <input type="text" class="form-control" id="comment" name="comment" placeholder="Comment">
           </div>
           <button type="submit" class="btn btn-sucess"> Submit</button>
         </form>
       </div>
       <div class="col-6 mt-5">
-        <a class="btn btn-sucess href="/profile">Return to Profile</a>
-        <a class="btn btn-sucess" href="/feed">Return to Feed</a>
+        <a class="btn btn-sucess" href="/feed"><i class="fa-solid fa-arrow-left"></i>  Return to Feed</a>
       </div>
     </div>
   </div>

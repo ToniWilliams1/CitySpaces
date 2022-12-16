@@ -1,5 +1,4 @@
 <%- include('partials/header') -%>
-
 <h1 class="text-5xl font-bold">Reflections</h1>
 <p>What did you do? (in brief)
   What did you learn and how did you feel about it? (in depth)
@@ -14,8 +13,7 @@
     <div id="body">
       <!--img and textarea-->
       <div class="imtcontainer">
-        <div class="img">
-        </div>
+
         <div class="textarea">
           <form action="/post/createPost" enctype="multipart/form-data" method="POST">
             <div class="mb-3">
@@ -25,7 +23,7 @@
               <input type="text" class="form-control" id="caption" name="caption" placeholder="Caption"></textarea>
             </div>
              <div class="mb-3">
-              <input type="file" class="form-control" id="imageUpload" name="file" placeholder="Image">
+              <input type="file" class="form-control" id="imageUpload" name="file" placeholder="Image ">
             </div> 
             <div class="icons">
               <div class="photos">
@@ -35,11 +33,9 @@
              <button type="submit" class="btn btn-primary" value="Upload">Submit</button> 
              <div class="title">
               <a href="#">
-
          </a>
               </div>
             </div>  
-
       </div>
     </div>
     </div>
@@ -53,35 +49,30 @@
 <div class="post">
   <div class="info">
     <div class="user">
-      <p class="username"><%=posts[i].user %></p>
+      <p class="username"><%=posts[i].userName %></p>
     </div>
-    <img src="img/option.PNG" class="options" alt="" />
   </div>
   <ul>
   <li class="col-6 justify-content-between mt-5">
     <a href="/post/<%= posts[i]._id%>">
   </li>
   </ul>
-  <img src="<%= posts[i].image%>" class="post-img" alt="" />
+  <img src="<%= posts[i].image%>" class="post-img" alt="View Full Post" /></a>
   <div class="post-content">
     <div class="reaction-wrapper">
-          <button class="btn btn-error fa fa-trash" type="submit"></button>
-          <button class="btn btn-error fa fa-heart" type="submit"></button>
-
-        </form>
+          <button class="btn btn-error fa fa-trash"></button>
+    <button class="btn btn-success fa fa-heart" type="submit"></button></a>
     </div>
-    <p class="likes"><%=posts[i].likes %> Likes </p>
-    <p class="description"><span><%=posts[i].user %></span> <%=posts[i].title %></p>
-    <p class="description"><span><%=posts[i].caption %></span> </p>
-
+    <%if(posts[i].likes > 1)  {%>
+    <p class="likes"><%=posts[i].likes %> likes</p>
+     <%}else {%>
+      <p class="likes"><%=posts[i].likes %> like</p>
+      <% } %>
+    <p class="description"><span><%=posts[i].user %></span> Title: <%=posts[i].title %></p>
+    <p class="description"><span> Caption: <%=posts[i].caption %></span> </p>
     <p class="post-time"><%=posts[i].createdAt %></p>
   </div>
- 
 </div>   
 <% } %>
-     
-
-
 <script src="js/main.js"></script>
-
 <%- include('partials/footer') -%>
