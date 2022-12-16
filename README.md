@@ -2,23 +2,22 @@
  
 Give yourself a sense of purpose, while making New York City communities happy.
 
-## Key Technologies, Packages, and Gems
+# Key Technologies, Packages, and Gems
 
-# Front end <br>
-HTML <br>
-CSS <br>
+## Front end <br>
+DaisyUI
 JavaScript <br>
 Tailwind CSS <br>
-DaisyUI
 
-# Back end <br>
-Node.js / Express.js <br>
+## Back end <br>
+Express.js <br>
 Cloudinary <br>
 Mongo DB <br>
 Mongoose <br>
 Multer <br>
-Passport <br>
+Node.js 
 NYC Open Data
+Passport <br>
 
 
 ## Core Features
