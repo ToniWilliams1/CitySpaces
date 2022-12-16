@@ -1,17 +1,17 @@
-# City Spaces
+# City Spaces NY
  
 Give yourself a sense of purpose, while making New York City communities happy.
 
 ## Key Technologies, Packages, and Gems
 
-• Front end <br>
+# Front end <br>
 HTML <br>
 CSS <br>
 JavaScript <br>
 Tailwind CSS <br>
 DaisyUI
 
-• Back end <br>
+# Back end <br>
 Node.js / Express.js <br>
 Cloudinary <br>
 Mongo DB <br>
@@ -19,6 +19,7 @@ Mongoose <br>
 Multer <br>
 Passport <br>
 NYC Open Data
+
 
 ## Core Features
 Users will log in to the app where they can filter through 600+ volunteer opportunities across categories such as health, education, and environment. <br>
@@ -46,6 +47,10 @@ NPM install
 Clone the repo git clone https://github.com/toniwilliams1/CitySpaces.git
 
 NPM Start
+
+## Optimizations
+
+This project is still in beta. New features include real time weather updates and ability to share opportunities via email.
 
 ## [Demo](https://luxebar.netlify.app/)
 <img src="https://user-images.githubusercontent.com/100317017/204971083-44b43493-0ea7-457f-a6a0-a0b736904d5e.png">
