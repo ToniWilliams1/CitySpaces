@@ -1,7 +1,7 @@
 const LocalStrategy = require("passport-local").Strategy;
 const mongoose = require("mongoose");
 const User = require("../models/User");
-var CoinbaseStrategy = require('passport-coinbase').Strategy;
+// var CoinbaseStrategy = require('passport-coinbase').Strategy;
 
 module.exports = function (passport) {
   
@@ -41,19 +41,19 @@ module.exports = function (passport) {
   });
 }))
 
-passport.use(new CoinbaseStrategy({
-  clientID: process.env.COINBASE_CLIENT_ID,
-  clientSecret: process.env.COINBASE_CLIENT_SECRET,
-  callbackURL: "http://localhost:4000/auth/coinbase/callback",
-  tokenURL: 'https://api.coinbase.com/oauth/token',
-  userProfileURL: 'https://api.coinbase.com/v2/user',
-},
-  function(accessToken, refreshToken, profile, cb) {
-    User.findOrCreate({ coinbaseId: profile.id }, function (err, user) {
-    return cb(err, user);
-    })
-  }
-));
+// passport.use(new CoinbaseStrategy({
+//   clientID: process.env.COINBASE_CLIENT_ID,
+//   clientSecret: process.env.COINBASE_CLIENT_SECRET,
+//   callbackURL: "http://localhost:4000/auth/coinbase/callback",
+//   tokenURL: 'https://api.coinbase.com/oauth/token',
+//   userProfileURL: 'https://api.coinbase.com/v2/user',
+// },
+//   function(accessToken, refreshToken, profile, cb) {
+//     User.findOrCreate({ coinbaseId: profile.id }, function (err, user) {
+//     return cb(err, user);
+//     })
+//   }
+// ));
 passport.serializeUser(function(user, done) {
 	// placeholder for custom user serialization
 	// null is for errors
