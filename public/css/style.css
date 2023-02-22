@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 
-
+.indicator-item-badge{
+  color:#9B5094;
+  font-family: 'Nerko One', cursive;
+}
 
 .mainDiv{
     width: 100%;
@@ -11,11 +14,12 @@
  margin: 50px auto;
  border-radius: 3px;
  position: relative;
+ 
 
 }
 .navbar{
   font-family: 'Nerko One', cursive;
-color: brown;
+color: #6A605C ;
 }
 
 
@@ -417,12 +421,142 @@ label{
 .footer{
     font-family: 'Nerko One', cursive;
     color: white;
+    background-color: #9B5094;
 }
 
 header{
     margin-bottom: 5%;
     font-family: 'Nerko One', cursive;
+    background: light gray;
 
+}
+
+
+.gif {
+
+  -webkit-animation: fadeslideUp 12s infinite; /* Chrome, Opera 15+, Safari 5+ */
+  -moz-animation: fadeslideUp 12s infinite; /* Fx 5+ */
+  -o-animation: fadeslideUp 12s infinite; /* Opera 12+ */
+  animation: fadeslideUp 12s infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+  font-family: 'Nerko One', cursive;
+   color: #9B5094;
+}
+
+.completed{
+color: green;
+}
+
+.gif h2 {
+  text-align: center;
+  font-weight: bold;
+  
+}
+
+#g2 {
+  animation-delay: -9s;
+  -webkit-animation-delay: -9s;
+}
+
+#g3 {
+  animation-delay: -6s;
+  -webkit-animation-delay: -6s;
+}
+
+#g4 {
+  animation-delay: -3s;
+  -webkit-animation-delay: -3s;
+}
+
+@-webkit-keyframes fadeslideUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-40%);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateY(-50%);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(-50%);
+  }
+  25% {
+    opacity: 0;
+    -webkit-transform: translateY(-60%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-60%);
+  }
+}
+
+@-moz-keyframes fadeslideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(-60%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60%);
+  }
+}
+
+@-o-keyframes fadeslideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(-60%);
+  }
+}
+
+@keyframes fadeslideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(-60%);
+    -ms-transform: translateY(-60%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60%);
+    -ms-transform: translateY(-60%);
+  }
+}
+
+@media (min-width: 321px) and (max-width: 600px) {
+  .gif h2 {
+    text-align: center;
+    font-size: 1em;
+  }
 }
 
 #cityspace{
@@ -470,9 +604,18 @@ color: green;
   color: rgba(0, 0, 0, 0.5);
 }
 
+.logout{
+  color: red;
+}
+
+
 .nav-items {
   height: 22px;
   position: relative;
+}
+
+.label-text{
+  color: #8FB8DE;
 }
 
 .icon {
@@ -721,11 +864,11 @@ color: green;
 }
 
 
-h1, .btn2{
-    color: green;
+h1{
+    color: #9B5094;
     font-family: 'Nerko One', cursive;
     text-align: center;
-	font-size: 60px;
+	font-size: 300px;
 	padding: 0;
 	margin: 0;
 	margin-left: 50%;
@@ -735,10 +878,15 @@ h1, .btn2{
 	animation: slide-in-anim 1.5s ease-out forwards;
 }
 
-.btn2{
-    font-size: 30px;
-    border: 2px solid black;
+.trash-btn{
+  color: red;
 }
+
+.btn-save{
+  color: gold;
+}
+
+
 
 @keyframes slide-in-anim {
 	20% {
@@ -759,17 +907,17 @@ h1, .btn2{
 
 h2{
     font-family: 'Nerko One', cursive;
-  
+  color: #9A94BC;
 }
 
 p{
     font-family: 'Nerko One', cursive;
-  
+   color: #9B5094;
 }
 
 
 .btn{
-    color: green;
+    color: #6A605C;
     font-family: 'Nerko One', cursive;
 
 }
@@ -802,22 +950,14 @@ section {
 .btnhome{
     margin-top: 15%;
 }
-.card {
-    width: 15%;
-    grid-template-columns: 200px 200px 200px;
-    float: left;
-    display: grid;
-    margin-right: 2%; 
-    font-family: 'Bodoni Moda', serif;
-}
+
 
 .card{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    flex-direction: row;
     align-items: center;
     border-radius: 0 0 15px 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 250px;
     padding-bottom: 15px;
     background-color: white;
 }

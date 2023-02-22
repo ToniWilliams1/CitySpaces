@@ -1,11 +1,10 @@
-   
    <!DOCTYPE html>
    <html lang="en">
      <head>
        <meta charset="UTF-8" />
        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-       <title>City Space NY</title>
+       <title>Register</title>
        <link href="https://cdn.jsdelivr.net/npm/daisyui@2.40.1/dist/full.css" rel="stylesheet" type="text/css" />
    <script src="https://cdn.tailwindcss.com"></script>
        <link
@@ -30,12 +29,11 @@
        <header class="container">
          <div class="navbar ">
            <div class="flex-1">
-             <a href="/feed">  <img src="imgs/cityspaceNY.png" width="10%"></a>
            </div>
          </div>
        </header>
    <main class="container">
-    <h1 class="text-5xl font-bold">Register</h1>
+    <h2 class="text-5xl font-bold">Register an Account</h2>
         <div class="row justify-content-center">
             <section class="col-6 mt-5">
                 <% if (locals.messages.errors) { %>
@@ -57,8 +55,9 @@
                       </div>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label"></label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Email address">
                       <span class="indicator-item badge">Required</span>
+
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Email address">
 
                       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
@@ -76,7 +75,7 @@
                       </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
-                  <a href="/login" class="link link-success">Already have an account? Log in</a>
+                  <a href="/" class="link">Already a Member? Log In</a>
             </section>
         </div>
     </main>

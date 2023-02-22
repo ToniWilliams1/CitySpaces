@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>City Space NY</title>
+    <title>City Spaces NYC</title>
     <html>
       <head>
         <meta charset="UTF-8" />
@@ -37,41 +37,69 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-  <div class="hero min-h-screen" style="background-image: url(../../imgs/Cityspaceny.png);">
-    <div class="hero-content text-center">
-    <h1 class="text-8xl font-bold">City Spaces</h1>
-    <div class="max-w-md">
-    </div>
-      </div>
-  </div>
-  <section>
-    <h2 class="why text-5xl font-bold">WHO WE ARE</h2>
-    <p>
-      Want to volunteer in NYC? Let City Space NY find the best volunteer opportunities near you. Participating organizations from all over the 5 boros leverage resources. City Space NY seeks to connect volunteers with opportunities to volunteer within their city spaces.
-    </p>
-    <a href="/about"><button class="btn btnhome">About Us</button></a>
+    <div class="hero min-h-screen bg-primary-content">
+      <div class="hero-content flex-col lg:flex-row-reverse">
+        <div class="text-center lg:text-left">
+          <h2 class="text-5xl font-bold">City Spaces NYC</h2>
+        </div>
 
-  </section>
-  <section>
-    <div class="div1">
-      <img
-        src="/imgs/groupvolunteers.jpg"
-      />
-      <h3 class="text-3xl font-bold">OPPORTUNITIES</h3>
-      <p>
-      Browse 600+ volunteer opportunities across categories such as health, education, and environment. Save the events you plan to attend! 
-      </p>
-      <a href="/signup"><button class="btn btnhome">Get Started</button></a>
+        <div class="gif" id="g1">
+          <h2 class="text-center"><em> Give yourself a sense of purpose, volunteer at a City Space today!</em></h2>
+        </div>
+        <div class="gif" id="g2">
+          <h2 class="text-center"><em>Save volunteer opportunities organized by event, category of event type, organization or location.</em></h2>
+        </div>
+        <div class="gif" id="g3">
+          <h2 class="text-center"><em>Share your volunteer experience with the world!</em></h2>
+        </div>
+        <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div class="card-body">
+            <p text-align="center">Demo: demouser@demo.com</br> demouser</p>
+            <div class="form-control">
+ 
+              <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+                <div class="alert alert-danger"><%= el.msg %></div>
+                <% }) %> <% } %> <% if (locals.messages.info) { %> <%
+                messages.info.forEach( el => { %>
+                <div class="alert alert-info"><%= el.msg %></div>
+                <% }) %> <% } %>
+                <form action="/login" method="POST">
+                  <div class="mb-3">
+                    <span class="label-text">Email Address</span>
+
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      name="email"
+                    />
+                  </div>
+            </div>
+
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Password</span>
+              </label>
+              <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              name="password"
+            />
+              <label class="label">
+              </label>
+            </div>
+           
+              <button type="submit" class="btn">Log In</button>
+        
+          </div>
+          <p><a href="/signup">Register An Account</a></p>
+
+        </div>
+      </div>
     </div>
-    <div class="div2">
-      <img src="/imgs/peoplecleaning.jpg" width="5%"/>
-      <h3 class="text-3xl font-bold">REFLECTIONS</h3>
-      <p>
-        Give yourself a sense of purpose, while making New York City communities happy. Faciliate a reflection discussion about projects.
-      </p>
-      <a href="/login"><button class="btn btnhome">Log In</button></a>
-    </div>
-  </section>
+    
 </body>
 </html>
 <%- include('partials/footer') -%>

@@ -1,35 +1,10 @@
 <%- include('partials/header') -%>
-<div class="left">
-  <div class="date">
-    Thursday, 8 December 2022
-  </div>
-  <div class="city">
-    New York City
-  </div>
-  <div class="tempreture">
-    27&deg;
-  </div>
-</div>
-<div class="container">
+  <h2>Welcome, <%=user.userName %>!</h2>
+  <div class="container">
   <div class="row mt-5">
+     
       <div class="col-6">
-        <div class="card">
-          <h2>Welcome, <%=user.userName %>!</h2>
-          <div class="cont">
-              <p>Email Address: <%= user.email %></p>
-                Saved Events: <%= user.watching.length %>
-                <div class="date">
-                  Thursday, 8 December 2022
-                </div>
-                <div class="city">
-                  New York City
-                </div>
-              </p> 
-          </div>
-      </div>      
-      </div>
-      <div class="col-6">
-        <h1 class="text-5xl font-bold">Saved Events   </h1>      <div class="badge"><%=user.watching.length %></div>
+        <h2 class="text-5xl font-bold">My Wishlist: <%=user.watching.length %></div>
         <% user.watching.forEach(data => { %>
           <div class="card w-96  ">
             <div class="card-body">
@@ -37,7 +12,7 @@
               class="col-1"
               method="GET"
             >
-              <button class="btn btn-error fa-solid fa-trash" type="submit"></button>
+              <button class="trash-btn fa-solid fa-trash" type="submit"></button>
             </form>
               <h2 class="card-title"> <em><%= %></h2>
                   <p class="card-title"> <em><%= user.watching.data %></p>
@@ -49,8 +24,10 @@
         <ul class="row list-unstyled">
         </ul>
         <div class="row justify-content-center mt-5">
-          <a class="btn" href="/events">Add <i class="fa-solid fa-plus"></i> </a>
+          <a class="btn" href="/events">Add A Space <i class="fa-solid fa-plus"></i> </a>
         </div>  
+      
+      
       </div>  
     </div>
   </div>

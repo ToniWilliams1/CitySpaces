@@ -5,8 +5,6 @@ const homeController = require("../controllers/home");
 const postsController = require("../controllers/posts");
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 const eventsController = require("../controllers/events");
-const todosController = require("../controllers/todos");
-const aboutController = require("../controllers/about");
 
 
 //Main Routes - simplified for now
@@ -18,9 +16,7 @@ router.post("/login", authController.postLogin);
 router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
-router.get("/todos", ensureAuth, todosController.getTodos);
 router.get("/events", ensureAuth, eventsController.getEvents);
-router.get("/about", aboutController.getAbout);
 router.get("/like-event/:id", eventsController.likeEvent);
 
 

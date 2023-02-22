@@ -1,24 +1,20 @@
 <%- include('partials/header') -%>
 
 <body>
-<h1 class="text-5xl font-bold">Opportunities</h1>
-    <div class="input-group">
-      <select class="select select-bordered bg-base-content">
-        <option disabled selected>Filter </option>
-       <button><a href="/about"> <option>Education</option></a></button>
-        <option>Environment</option>
-        <option>Health</option>
-        <option>Helping Neighbors in Need</option>
-        <option>Moving, lifting, and rearranging</option>
-        <option>Strengthening Communities</option>
-      </select>
-      <button class="btn gap-2">
-  ALL OPPORTUNITIES
-        <div class="badge"><%=arrayOfData.length %></div>
-      </button>
-      <button class="btn gap-2">
-       </button>
-       </div>
+<h2 class="text-5xl font-bold">Spaces</h2>
+
+  <button class="btn">Filter</button>
+  <div class="card w-96 bg-base-100 shadow-xl">
+    <div class="card-body">
+      <div class="card-actions justify-end">
+      </div>
+      <h2>Borough</h2>
+      <input type="checkbox" checked="unchecked" class="checkbox" /> <p>The Bronx</p>
+      <input type="checkbox" checked="unchecked" class="checkbox" /><p>Brooklyn</p>
+      <input type="checkbox" checked="unchecked" class="checkbox" /> <p>Manhattan</p>
+      <input type="checkbox" checked="unchecked" class="checkbox" /><p>Queens</p>
+    </div>
+  </div>
     <% arrayOfData.forEach(data => { %>
         <div class="card w-96  ">
           <div class="card-body">
@@ -27,14 +23,14 @@
             action="/like-event/<%= data.opportunity_id %>" 
             method="GET"
           >
-            <button class="btn btn-warning fa fa-bookmark" type="submit"></button>
+            <button class="btn-save fa fa-bookmark" type="submit"></button>
           </form>
             <h2 class="card-title"> <em><%= %></h2>
                 <p class="card-title"> <em><%= data.recurrence_type %></p>
                 <div class="card-actions justify-end">
-   <p><%= data.borough %></p>
+   <p><i class="fa-solid fa-map-pin"></i> <%= data.borough %></p>
             <h2>  <%=data.summary %></h2>
-<a href="<%= data.display_url %>"><%=data.category_desc %></a>
+<a href="<%= data.display_url %>"> <i class="fa-solid fa-tag"></i> <%=data.category_desc %></a>
                 </div>
           </div>
         </div>

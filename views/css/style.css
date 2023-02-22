@@ -22,13 +22,7 @@ footer, .flex-none{
 
 }
 
-.card {
-    font-family: 'Bodoni Moda', serif;
-    flex: 33.33%;
-    height: 200px;
-    padding: 10px;
-    margin: 5px;
-}
+
 
 .index{
     width: 40%;
