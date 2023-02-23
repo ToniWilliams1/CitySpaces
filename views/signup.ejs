@@ -33,7 +33,7 @@
          </div>
        </header>
    <main class="container">
-    <h2 class="text-5xl font-bold">Register an Account</h2>
+    <h2 class="text-5xl font-bold">Register </h2>
         <div class="row justify-content-center">
             <section class="col-6 mt-5">
                 <% if (locals.messages.errors) { %>
@@ -46,38 +46,65 @@
                         <div class="alert alert-info"><%= el.msg %></div>
                     <% }) %>    
                 <% } %>
-                <form action="/signup" method="POST">
-                    <div class="mb-3">
-                        <label for="userName" class="form-label"></label>
-                        <span class="indicator-item badge">Required</span>
 
-                        <input type="text" class="form-control" id="userName" name="userName" placeholder="User name">
-                      </div>
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label"></label>
-                      <span class="indicator-item badge">Required</span>
+                <div class="sign-up card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                  <div class="card-body">
+                    <div class="form-control">
+         
+                      <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+                        <div class="alert alert-danger"><%= el.msg %></div>
+                        <% }) %> <% } %> <% if (locals.messages.info) { %> <%
+                        messages.info.forEach( el => { %>
+                        <div class="alert alert-info"><%= el.msg %></div>
+                        <% }) %> <% } %>
+                        <form action="/signup" method="POST">
+                          <div class="mb-3">
+                            <span class="label-text">User Name:</span>
 
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Email address">
-
-                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            <label for="userName" class="form-label"></label>
+    
+                            <input type="text" class="form-control" id="userName" name="userName">
+                          </div>
+                          <div class="mb-3">
+                            <span class="label-text">Email Address:</span>
+                            <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label"></label>
+        
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" >
+        
+                              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            </div>
+                           
+                          </div>
                     </div>
-                    <div class="mb-3">
-                      <label for="password" class="form-label"></label>
-                      <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-                      <span class="indicator-item badge">Required</span>
+        
+                    <div class="form-control">
+                      <label class="label">
+                      </label>
+                      <div class="mb-3">
+                        <span class="label-text">Password:</span>
 
-                    </div>
-                    <div class="mb-3">
-                        <label for="confirmPassword" class="form-label"></label>
-                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm password">
-                        <span class="indicator-item badge">Required</span>
-
+                        <label for="password" class="form-label"></label>
+                        <input type="password" class="form-control" id="password" name="password">
+  
                       </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
-                  <a href="/" class="link">Already a Member? Log In</a>
-            </section>
-        </div>
+                      <div class="mb-3">
+                        <span class="label-text">Confirm Password:</span>
+
+                          <label for="confirmPassword" class="form-label"></label>
+                          <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+  
+                        </div>
+                    
+                      <label class="label">
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>                
+                  </div>
+                  <a href="/" class="demo">Already a Member? Log In</a>
+                </div>
+              </div>
+            </div>
     </main>
 
 <%- include('partials/footer') -%>

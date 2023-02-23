@@ -3,12 +3,12 @@
 <body>
 <h2 class="text-5xl font-bold">Spaces</h2>
 
-  <button class="btn">Filter</button>
-  <div class="card w-96 bg-base-100 shadow-xl">
+  <button class="btn">Filter <i class="fa-solid fa-filter"></i></button>
+  <div class="card w-96  w-1/2 bg-base-100 shadow-xl">
     <div class="card-body">
       <div class="card-actions justify-end">
       </div>
-      <h2>Borough</h2>
+      <h2><i class="fa-solid fa-map-pin"></i> Location</h2>
       <input type="checkbox" checked="unchecked" class="checkbox" /> <p>The Bronx</p>
       <input type="checkbox" checked="unchecked" class="checkbox" /><p>Brooklyn</p>
       <input type="checkbox" checked="unchecked" class="checkbox" /> <p>Manhattan</p>
@@ -16,7 +16,9 @@
     </div>
   </div>
     <% arrayOfData.forEach(data => { %>
-        <div class="card w-96  ">
+        <div class="card w-1/3  ">
+          <div class="flex-container">
+
           <div class="card-body">
             <form
             class="col-1"
@@ -33,6 +35,7 @@
 <a href="<%= data.display_url %>"> <i class="fa-solid fa-tag"></i> <%=data.category_desc %></a>
                 </div>
           </div>
+        </div>
         </div>
       <% }) %>
       <div class="btn-group">

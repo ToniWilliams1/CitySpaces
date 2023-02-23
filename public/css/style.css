@@ -3,9 +3,26 @@
 @tailwind utilities;
 
 
-.indicator-item-badge{
+
+
+  
+.sign-up{
+  width: 10px;
+}
+
+.flex-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+}
+
+.indicator-item-badge, .label-text{
   color:#9B5094;
   font-family: 'Nerko One', cursive;
+}
+
+.demo{
+  text-align: center;
 }
 
 .mainDiv{
@@ -57,14 +74,16 @@ text-align: center;
 
 
 .title{
- width: 100%;
+ width: 80%;
  height: 33px;
+ margin-left: 5%;
  background-color: #f6f7f9;
  border-bottom: 1px solid #dddfe2;
  border-radius: 2px 2px 0 0;
- font-size: 15.5px;
+ font-size: 1.3em;
  font-family: 'Nerko One', cursive;
- color: green;
+ color: #6A605C;
+ text-align: center;
 
 }
 .title p{
@@ -422,13 +441,25 @@ label{
     font-family: 'Nerko One', cursive;
     color: white;
     background-color: #9B5094;
+    margin-top: 10%;
 }
 
 header{
     margin-bottom: 5%;
+    padding-top: 3%;
     font-family: 'Nerko One', cursive;
-    background: light gray;
+}
 
+header li{
+  font-size: 1.5em;
+}
+
+
+
+
+header h1{
+  font-size: 2em;
+  margin-left: 3%;
 }
 
 
@@ -614,9 +645,6 @@ color: green;
   position: relative;
 }
 
-.label-text{
-  color: #8FB8DE;
-}
 
 .icon {
   height: 100%;
@@ -625,12 +653,6 @@ color: green;
   display: inline-block;
 }
 
-.user-profile {
-  width: 22px;
-  border-radius: 50%;
-  background-image: url(img/branco.JPG);
-  background-size: cover;
-}
 
 .main {
   width: 100%;
@@ -906,13 +928,21 @@ h1{
 
 
 h2{
-    font-family: 'Nerko One', cursive;
+  font-family: 'Nerko One', cursive;
   color: #9A94BC;
+  text-align: center;
+  font-size: 500px;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  font-weight: bolder;
+
 }
 
 p{
     font-family: 'Nerko One', cursive;
    color: #9B5094;
+   font-size: 1.5em;
+   text-align: center;
 }
 
 
@@ -936,10 +966,6 @@ text-align: center;
   float: right;
 }
 
-.why{
-
-}
-
 section {
   color: black;
   padding-top: 50px;
@@ -952,7 +978,7 @@ section {
 }
 
 
-.card{
+/* .card{
     display: grid;
     flex-direction: row;
     align-items: center;
@@ -960,7 +986,7 @@ section {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding-bottom: 15px;
     background-color: white;
-}
+} */
 
 .card img{
     width: 80px;

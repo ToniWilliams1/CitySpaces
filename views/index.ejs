@@ -54,7 +54,7 @@
         </div>
         <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <div class="card-body">
-            <p text-align="center">Demo: demouser@demo.com</br> demouser</p>
+            <p class="demo">Demo: demouser@demo.com</br> demouser</p>
             <div class="form-control">
  
               <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
@@ -65,7 +65,7 @@
                 <% }) %> <% } %>
                 <form action="/login" method="POST">
                   <div class="mb-3">
-                    <span class="label-text">Email Address</span>
+                    <span class="label-text">Email Address:</span>
 
                     <input
                       type="email"
@@ -79,7 +79,7 @@
 
             <div class="form-control">
               <label class="label">
-                <span class="label-text">Password</span>
+                <span class="label-text">Password:</span>
               </label>
               <input
               type="password"
@@ -94,12 +94,11 @@
               <button type="submit" class="btn">Log In</button>
         
           </div>
-          <p><a href="/signup">Register An Account</a></p>
+          <p class="demo"><a href="/signup">Register An Account</a></p>
 
         </div>
       </div>
     </div>
-    
 </body>
 </html>
 <%- include('partials/footer') -%>

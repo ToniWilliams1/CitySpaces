@@ -1,6 +1,6 @@
 <%- include('partials/header') -%>
   <div class="container">
-    <h1 class="text-5xl font-bold"><%= post.userName %>'s <Ri:a>Reflection</Ri:a></h1>
+    <h2 class="text-5xl font-bold"><%= post.userName %>'s <Ri:a>Thread</Ri:a></h2>
     <div class="row justify-content-center mt-5">
       <div class="col-6">
         <img class="post-img" src="<%= post.image%>" />
@@ -8,14 +8,14 @@
           <form class="col-1" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
             <button class="btn btn-success fa fa-heart" type="submit"></button>
           </form>
-          <%if(post.likes > 1)  {%>
-            <p class="likes"><%=post.likes %> likes</p>
+          <%if(post.likes >= 1)  {%>
+            <p class="likes"><i class="fa fa-heart"> </i> <%=post.likes %></p>
              <%}else {%>
-              <p class="likes"><%=post.likes %> like</p>
+              <p class="likes">No likes yet. Be the first!</p>
               <% } %>
           <%if(post.user==user.id){ %>
             <form action="/post/deletePost/<%= post.id %>?_method=DELETE" method="POST" class="col-3">
-              <button class="btn btn-error fa fa-trash" type="submit"></button>
+              <button class="trash-btn btn-error fa fa-trash" type="submit"></button>
             </form>
             <%}%>
             <p class="description">
@@ -24,7 +24,7 @@
              <p class="description">
               Caption <%= post.caption %>
              </p>
-             <p class="post-time"><%=post.createdAt %></p>
+             <p class="post-time"><i class="fa-solid fa-clock"></i> <%=post.createdAt %></p>
         </div>
       </div>
       <div class="col-3 mt-5">
@@ -42,11 +42,11 @@
                   </form>
                   <%if(post.user==user.id){ %>
                     <form action="/comments/deleteComment/<%= comment[i].id %>?_method=PUT" method="POST" class="col-3">
-                      <button class="btn btn-error fa fa-trash" type="submit"></button>
+                      <button class="trash-btn fa fa-trash" type="submit"></button>
                       <input type="hidden" name="postid" value="<%= post.id %>">
                     </form>
                     <%}%>
-                  <h3 class="likes">Likes: <%= comment[i].likes %>
+                  <h3 class="likes"><i class="fa fa-heart"></i> <%= comment[i].likes %>
                   </h3>
               </li>
               <% } %>
@@ -57,11 +57,12 @@
 <!-- Comments Section -->
       
       <div class="mt-5">
-        <h2>Join Discussion</h2>
         <form action="/comments/createComment/<%= post.id %>" method="POST">
           <div class="mb-3">
+            <span class="label-text">Comment:</span>
+
             <label for="comment" class="form-label" ></label>
-            <input type="text" class="form-control" id="comment" name="comment" placeholder="Comment">
+            <input type="text" class="form-control" id="comment" name="comment">
           </div>
           <button type="submit" class="btn btn-sucess"> Submit!</button>
         </form>

@@ -15,10 +15,14 @@
         <div class="textarea">
           <form action="/post/createPost" enctype="multipart/form-data" method="POST">
             <div class="mb-3">
-                <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+              <span class="label-text">Title:</span>
+
+                <input type="text" class="form-control" id="title" name="title" >
             </div>
             <div class="mb-3">
-              <input type="text" class="form-control" id="caption" name="caption" placeholder="Caption"></textarea>
+              <span class="label-text">Reflection:</span>
+
+              <input type="text" class="form-control" id="caption" name="caption"></textarea>
             </div>
              <div class="mb-3">
               <input type="file" class="form-control" id="imageUpload" name="file">
@@ -55,17 +59,16 @@
   <img src="<%= posts[i].image%>" class="post-img" alt="View Full Post" /></a>
   <div class="post-content">
     <div class="reaction-wrapper">
-          <button class="btn btn-error fa fa-trash"></button>
-    <button class="btn btn-success fa fa-heart" type="submit"></button></a>
+          <button class="trash-btn  fa fa-trash"></button>
     </div>
     <%if(posts[i].likes > 1)  {%>
-    <p class="likes"><%=posts[i].likes %> likes</p>
+    <p class="likes"> <i class="fa fa-heart"></i> <%=posts[i].likes %></p>
      <%}else {%>
-      <p class="likes"><%=posts[i].likes %> like</p>
+      <p class="likes"> <i class="fa fa-heart"></i> <%=posts[i].likes %> </p>
       <% } %>
     <p class="description"><span><%=posts[i].user %></span> Title: <%=posts[i].title %></p>
     <p class="description"><span> Caption: <%=posts[i].caption %></span> </p>
-    <p class="post-time"><%=posts[i].createdAt %></p>
+    <p class="post-time"><i class="fa-solid fa-clock"></i> <%=posts[i].createdAt %></p>
   </div>
 </div>   
 <% } %>
