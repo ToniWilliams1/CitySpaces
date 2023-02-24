@@ -37,13 +37,14 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
+    <h2 class="text-5xl font-bold">City Spaces NYC</h2>
+
     <div class="hero min-h-screen bg-primary-content">
       <div class="hero-content flex-col lg:flex-row-reverse">
         <div class="text-center lg:text-left">
-          <h2 class="text-5xl font-bold">City Spaces NYC</h2>
         </div>
 
-        <div class="gif" id="g1">
+         <div class="gif" id="g1">
           <h2 class="text-center"><em> Give yourself a sense of purpose, volunteer at a City Space today!</em></h2>
         </div>
         <div class="gif" id="g2">
@@ -54,7 +55,6 @@
         </div>
         <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <div class="card-body">
-            <p class="demo">Demo: demouser@demo.com</br> demouser</p>
             <div class="form-control">
  
               <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
@@ -64,6 +64,7 @@
                 <div class="alert alert-info"><%= el.msg %></div>
                 <% }) %> <% } %>
                 <form action="/login" method="POST">
+                  <h2 class="text-3xl font-bold">Log In</h2>
                   <div class="mb-3">
                     <span class="label-text">Email Address:</span>
 
@@ -91,14 +92,63 @@
               </label>
             </div>
            
-              <button type="submit" class="btn">Log In</button>
-        
+              <button type="submit" class="btn btn-success">Log In!</button>
+              <p class="demo">Demo<br> demouser@demo.com</br> demouser</p>
+
           </div>
           <p class="demo"><a href="/signup">Register An Account</a></p>
 
         </div>
       </div>
     </div>
+
+<div class="flex-wrap items-center justify-center gap-8 text-center sm:flex">
+  <div class="w-full px-4 py-4 mt-6 bg-white rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 dark:bg-gray-800">
+      <div class="flex-shrink-0">
+          <div class="flex items-center justify-center w-12 h-12 mx-auto text-white bg-indigo-500 rounded-md">
+              <svg width="20" height="20" fill="currentColor" class="w-6 h-6" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M491 1536l91-91-235-235-91 91v107h128v128h107zm523-928q0-22-22-22-10 0-17 7l-542 542q-7 7-7 17 0 22 22 22 10 0 17-7l542-542q7-7 7-17zm-54-192l416 416-832 832h-416v-416zm683 96q0 53-37 90l-166 166-416-416 166-165q36-38 90-38 53 0 91 38l235 234q37 39 37 91z">
+                  </path>
+              </svg>
+          </div>
+      </div>
+      <h3 class="py-4 text-2xl font-semibold text-gray-700 sm:text-xl dark:text-black">
+600+ Volunteer Spaces!     </h3>
+      <p class="boxes py-4 ">
+        Volunteer at a participating City Space across any of the five boroughs.    </p>
+  </div>
+  <div class="w-full px-4 py-4 mt-6 bg-white rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 sm:mt-16 md:mt-20 lg:mt-24 dark:bg-gray-800">
+      <div class="flex-shrink-0">
+          <div class="flex items-center justify-center w-12 h-12 mx-auto text-white bg-indigo-500 rounded-md">
+              <svg width="20" height="20" fill="currentColor" class="w-6 h-6" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M491 1536l91-91-235-235-91 91v107h128v128h107zm523-928q0-22-22-22-10 0-17 7l-542 542q-7 7-7 17 0 22 22 22 10 0 17-7l542-542q7-7 7-17zm-54-192l416 416-832 832h-416v-416zm683 96q0 53-37 90l-166 166-416-416 166-165q36-38 90-38 53 0 91 38l235 234q37 39 37 91z">
+                  </path>
+              </svg>
+          </div>
+      </div>
+      <h3 class="py-4 text-2xl font-semibold text-gray-700 sm:text-xl dark:text-black">
+        Organize Your Events
+      </h3>
+      <p class="boxes py-4 ">
+        Save opportunities by event, category, organization or location.      </p>
+  </div>
+  <div class="w-full px-4 py-4 mt-6 bg-white rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 dark:bg-gray-800">
+      <div class="flex-shrink-0">
+          <div class="flex items-center justify-center w-12 h-12 mx-auto text-white bg-indigo-500 rounded-md">
+              <svg width="20" height="20" fill="currentColor" class="w-6 h-6" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M491 1536l91-91-235-235-91 91v107h128v128h107zm523-928q0-22-22-22-10 0-17 7l-542 542q-7 7-7 17 0 22 22 22 10 0 17-7l542-542q7-7 7-17zm-54-192l416 416-832 832h-416v-416zm683 96q0 53-37 90l-166 166-416-416 166-165q36-38 90-38 53 0 91 38l235 234q37 39 37 91z">
+                  </path>
+              </svg>
+          </div>
+      </div>
+      <h3 class="boxes py-4 text-2xl font-semibold  sm:text-xl ">
+          Share Your Experience with Others!
+      </h3>
+      <p class="boxes py-4 ">
+Upload a photo describing your experience and let others join in on the conversation!  </div>
+</div>
+
+
 </body>
 </html>
 <%- include('partials/footer') -%>

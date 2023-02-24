@@ -32,8 +32,9 @@
            </div>
          </div>
        </header>
+       <h2 class="text-5xl font-bold">City Spaces NYC</h2>
+
    <main class="container">
-    <h2 class="text-5xl font-bold">Register </h2>
         <div class="row justify-content-center">
             <section class="col-6 mt-5">
                 <% if (locals.messages.errors) { %>
@@ -50,7 +51,8 @@
                 <div class="sign-up card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                   <div class="card-body">
                     <div class="form-control">
-         
+                      <h2 class="text-3xl font-bold">Register </h2>
+
                       <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
                         <div class="alert alert-danger"><%= el.msg %></div>
                         <% }) %> <% } %> <% if (locals.messages.info) { %> <%
@@ -99,9 +101,9 @@
                       <label class="label">
                       </label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>                
+                    <button type="submit" class="btn btn-success">Submit!</button>                
                   </div>
-                  <a href="/" class="demo">Already a Member? Log In</a>
+                  <a href="/"><p class="demo">Already a Member? Log In</p></a>
                 </div>
               </div>
             </div>

@@ -19,10 +19,19 @@
 .indicator-item-badge, .label-text{
   color:#9B5094;
   font-family: 'Nerko One', cursive;
+  font-size: 1.3em;
+}
+
+.form-text{
+  font-family: 'Nerko One', cursive;
+
 }
 
 .demo{
   text-align: center;
+  margin-bottom: 5%;
+  color:#9A94BC;
+  text-decoration: underline;
 }
 
 .mainDiv{
@@ -34,7 +43,16 @@
  
 
 }
-.navbar{
+
+.mr-2{
+font-size: 1.5em;
+margin-left: 5%;
+margin-right: 5%;
+margin-top: 1.5%;
+margin-bottom: 1.5%;
+}
+
+.navbar, .boxes, .mr-2{
   font-family: 'Nerko One', cursive;
 color: #6A605C ;
 }
@@ -278,9 +296,7 @@ label{
   -webkit-transition-timing-function: cubic-bezier(0.5, 1.65, 0.37, 0.66);
   transition-timing-function: cubic-bezier(0.5, 1.65, 0.37, 0.66);
 }
-.login-btn {
-	color: green;
-}
+
 .login-btn:focus,
 .login-btn:hover,
 .login-btn:active {
@@ -478,7 +494,6 @@ color: green;
 }
 
 .gif h2 {
-  text-align: center;
   font-weight: bold;
   
 }
@@ -949,29 +964,11 @@ p{
 .btn{
     color: #6A605C;
     font-family: 'Nerko One', cursive;
+    border: 1px solid #6A605C;
 
 }
 
-.div1 {
-  font-family: 'Nerko One', cursive;
-text-align: center;
-  width: 45%;
-  float: left;
-}
 
-.div2 {
-  font-family: 'Nerko One', cursive;
-text-align: center;
-  width: 45%;
-  float: right;
-}
-
-section {
-  color: black;
-  padding-top: 50px;
-  padding-right: 80px;
-  text-align: center;
-}
 
 .btnhome{
     margin-top: 15%;

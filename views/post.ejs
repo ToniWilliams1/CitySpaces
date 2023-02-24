@@ -31,13 +31,14 @@
       </div>
       <div class="container">
         <div class="row justify-content-center mt-5">
+          <h2 class="text-3xl font-bold">Comments:</h2>
+
           <ul class="row list-unstyled">
             <% for(var i=0; i< comment.length; i++) {%>
               <% if (comment[i].deleted == false){ %>
               <li class="col-6 justify-content-between mt-5">
                 <%= comment[i].comment %>
                   <form class="col-1" action="/comment/likeComment/<%= comment[i]._id %>?_method=PUT" method="POST">
-                    <button class="btn btn-primary fa fa-heart" type="submit"></button>
                     <input type="hidden" name="postid" value="<%= post.id %>">
                   </form>
                   <%if(post.user==user.id){ %>
@@ -46,7 +47,6 @@
                       <input type="hidden" name="postid" value="<%= post.id %>">
                     </form>
                     <%}%>
-                  <h3 class="likes"><i class="fa fa-heart"></i> <%= comment[i].likes %>
                   </h3>
               </li>
               <% } %>
@@ -64,11 +64,11 @@
             <label for="comment" class="form-label" ></label>
             <input type="text" class="form-control" id="comment" name="comment">
           </div>
-          <button type="submit" class="btn btn-sucess"> Submit!</button>
+          <button type="submit" class="btn btn-success"> Submit!</button>
         </form>
       </div>
       <div class="col-6 mt-5">
-        <a class="btn btn-sucess" href="/feed"> Back to Reflections</a>
+        <a class="btn" href="/feed"> Back to Reflections</a>
       </div>
     </div>
   </div>
