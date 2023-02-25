@@ -5,19 +5,27 @@ Give yourself a sense of purpose, while making New York City communities happy.
 # Key Technologies, Packages, and Gems
 
 ## Front end <br>
-DaisyUI <br>
-JavaScript <br>
-Tailwind CSS <br>
+· DaisyUI <br>
+· JavaScript <br>
+· Tailwind CSS <br>
 
 ## Back end <br>
-Express.js <br>
-Cloudinary <br>
-Mongo DB <br>
-Mongoose <br>
-Multer <br>
-Node.js <br>
-NYC Open Data API <br>
-Passport <br>
+· EJS (server-side templating) <br>
+· Express-session (sessions, cookies) <br>
+· Express-flash (error handling)
+· Cloudinary <br>
+· Mongo DB <br>
+· Mongoose <br>
+· Multer <br>
+· Node.js <br>
+· NYC Open Data API <br>
+· Passport (auth) <br>
+· Passport-local <br>
+· Passport-local-mongoose
+· Morgan (logging) <br>
+· bcrypt <br>
+· cors <br>
+· dotenv <br>
 
 
 ## Core Features
