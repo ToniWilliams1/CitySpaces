@@ -53,34 +53,43 @@
       </a>
   </li>
     <li class="mr-2">
-        <a href="/profile" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 ">
+        <a href="/signup" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 ">
           <i class="fa-solid fa-user"></i>  Sign Up
         </a>
     </li>
-    
 </ul>
 </div>
     <h2 class="text-5xl font-bold">City Spaces NYC</h2>
     <div class="hero min-h-screen bg-primary-content">
       <div class="hero-content flex-col lg:flex-row-reverse">
-
         <div class="text-center lg:text-left">
-          <P>Studies have shown that volunteering can provide a healthy boost to your self-confidence, self-esteem, aand life satisfaction. Volunteering gives you the opporutnity to ppractice and develop your solcial skills. Reducing the risk of despression is another important benefit of volunteering. Volunteering keeps you in regular contact with others and helps you develop a solid support system</P>
-
+          <P>Studies have shown that volunteering can provide a healthy boost to your self-confidence, self-esteem, and life satisfaction. Volunteering gives you the opportunity to practice and develop your social skills. Reducing the risk of depression is another important benefit of volunteering. Volunteering keeps you in regular contact with others and helps you develop a solid support system. Give yourself a sense of purpose, while volunteering your time to a City Space</P>
      </div>
-
-       
         <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <div class="card-body">
             <div class="form-control">
- 
+              <button type="button" class="py-2 px-4 flex justify-center items-center  bg-red-600 hover:bg-red-700 focus:ring-red-500 focus:ring-offset-red-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                <svg width="20" height="20" fill="currentColor" class="mr-2" id="google" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M896 786h725q12 67 12 128 0 217-91 387.5t-259.5 266.5-386.5 96q-157 0-299-60.5t-245-163.5-163.5-245-60.5-299 60.5-299 163.5-245 245-163.5 299-60.5q300 0 515 201l-209 201q-123-119-306-119-129 0-238.5 65t-173.5 176.5-64 243.5 64 243.5 173.5 176.5 238.5 65q87 0 160-24t120-60 82-82 51.5-87 22.5-78h-436v-264z">
+                    </path>
+                </svg>
+                Sign in with Google
+              </button>
+              <p>or</p>
+
+              <div class="pt-8 flex border-t border-gray-200 max-w-xs mx-auto items-center justify-between">
+
+              </div>
+
               <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
                 <div class="alert alert-danger"><%= el.msg %></div>
                 <% }) %> <% } %> <% if (locals.messages.info) { %> <%
                 messages.info.forEach( el => { %>
                 <div class="alert alert-info"><%= el.msg %></div>
                 <% }) %> <% } %>
+
                 <form action="/login" method="POST">
+
                   <h2 class="text-3xl font-bold">Log In</h2>
                   <div class="mb-3">
                     <span class="label-text">Email Address:</span>
