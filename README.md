@@ -61,5 +61,5 @@ NPM Start
 This project is still in beta. New features include real time weather updates and ability to share opportunities via email.
 
 ## [Live Demo](https://cityspacesny.herokuapp.com)
-<img src="https://user-images.githubusercontent.com/100317017/204971083-44b43493-0ea7-457f-a6a0-a0b736904d5e.png">
+[cc](https://user-images.githubusercontent.com/100317017/221681582-5ed495db-70b9-4501-a670-b225ab556d85.gif)
 
