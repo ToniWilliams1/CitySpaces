@@ -11,6 +11,7 @@ const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
 const commentRoutes = require("./routes/comments");
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 
 
@@ -70,80 +71,29 @@ app.use('/', (req, res, next) => {
 app.listen(process.env.PORT, () => {
 	console.log(`Server is running on PORT ${process.env.PORT}, you better catch it!`);
 });
+// app.get('/auth/google',
+//   passport.authenticate('google', { scope: ['profile'] }));
 
-app.get('/auth/coinbase',
-  passport.authenticate('coinbase'));
+//   app.get('/auth/google/callback',
+//   passport.authenticate('google', { failureRedirect: '/login' }),
+//   function(req, res) {
+//     // Successful authentication, redirect to profile page.
+//     res.redirect('/profile');
+//   });
 
-app.get('/auth/coinbase/callback', 
-  passport.authenticate('coinbase', { failureRedirect: '/login' }),
-  function(req, res) {
-    // Successful authentication, redirect home.
-    res.redirect('/profile');
-  });
-
-  app.get('/login/coinbase/return', (req, res, next) => {
-	return passport.authenticate('coinbase', { failureRedirect: '/' }, (err, user, info) => {
-		if (err) {
-			res.redirect('/error');
-		} else {
-			req.session.save(() => {
-				res.redirect('/feed');
-			});
-		}
-		next();
-	})(req, res, next);
+//   passport.use(new GoogleStrategy({
+//     clientID: GOOGLE_CLIENT_ID,
+//     clientSecret: GOOGLE_CLIENT_SECRET,
+//     callbackURL: "http://localhost:4000/auth/google/callback"
+//   },
+//   function(accessToken, refreshToken, profile, done) {
+//     // handle user data and authentication
+ //}
+//));
 
 
 
-	app.get("/callback", async (req, res) => {
-		const { code, state } = req.query;
-		if (state === SECRET) {
-		  const data = qs.stringify({
-			'grant_type': 'authorization_code',
-			'code': code,
-			'client_id': COINBASE_CLIENT_ID,
-			'client_secret': COINBASE_CLIENT_SECRET,
-			'redirect_uri': REDIRECT_URI
-		  });
-		  const config = {
-			method: 'post',
-			url: '<https://api.coinbase.com/oauth/token>',
-			headers: {
-			  'Content-Type': 'application/x-www-form-urlencoded'
-			},
-			data
-		  };
 	  
-		  try {
-			const response = await axios(config);
-	  
-			// saving tokens for other requests
-			accessToken = response.data.access_token;
-			refreshToken = response.data.refresh_token;
-	  
-			res.send({ response: response?.data });
-		  } catch (e) {
-			console.log("Could not trade code for tokens", e.response.data)
-		  }
-		}
-	  });
+		
 
-	  // Gets the user details
-app.get("/user", async (req, res) => {
-	const config = {
-	  method: 'get',
-	  url: 'https://api.coinbase.com/v2/user',
-	  headers: {
-		'Authorization': `Bearer ${accessToken}`
-	  }
-	};
-  
-	try {
-	  const response = await axios(config);
-	  res.send({ response: response?.data })
-	} catch (e) {
-	  console.log("Could not get user", e.response.data)
-	}
-  });
 
-});

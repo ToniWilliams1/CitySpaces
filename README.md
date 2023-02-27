@@ -1,18 +1,18 @@
-# City Spaces NY
+# City Spaces NYC
  
 Give yourself a sense of purpose, while making New York City communities happy.
 
 # Key Technologies, Packages, and Gems
 
-## Front end <br>
+## Front End <br>
 · DaisyUI <br>
 · JavaScript <br>
 · Tailwind CSS <br>
 
-## Back end <br>
+## Back End <br>
 · EJS (server-side templating) <br>
 · Express-session (sessions, cookies) <br>
-· Express-flash (error handling)
+· Express-flash (error handling) <br>
 · Cloudinary <br>
 · Mongo DB <br>
 · Mongoose <br>
@@ -21,7 +21,8 @@ Give yourself a sense of purpose, while making New York City communities happy.
 · NYC Open Data API <br>
 · Passport (auth) <br>
 · Passport-local <br>
-· Passport-local-mongoose
+· Passport-local-mongoose <br>
+· Passport Google OAuth <br>
 · Morgan (logging) <br>
 · bcrypt <br>
 · cors <br>
@@ -29,11 +30,11 @@ Give yourself a sense of purpose, while making New York City communities happy.
 
 
 ## Core Features
-Users will log in to the app where they can filter through 600+ volunteer opportunities across categories such as health, education, and environment. <br>
+Users will either create an account using an email address and password, or log in to the app via Google account where they can filter through 600+ volunteer opportunities across categories such as health, education, strengthening communities, and environment. <br>
 
-Users can save the events they plan to attend, and mark the ones they've attended as "complete". <br>
+Users can save the events they would like to attend, and mark the ones they've attended as "complete". <br>
 
-Once marked complete, the user can faciliate a reflection discussion about the project they completed. 
+Once marked complete, the user can faciliate a reflection discussion about the project they completed. Other users may hone in on the conversation by commenting and liking posts. 
 
 ## Things To Add
 
@@ -59,6 +60,6 @@ NPM Start
 
 This project is still in beta. New features include real time weather updates and ability to share opportunities via email.
 
-## [Demo](https://luxebar.netlify.app/)
+## [Live Demo](https://cityspacesny.herokuapp.com)
 <img src="https://user-images.githubusercontent.com/100317017/204971083-44b43493-0ea7-457f-a6a0-a0b736904d5e.png">
 
