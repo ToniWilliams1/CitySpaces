@@ -1,20 +1,11 @@
 const LocalStrategy = require("passport-local").Strategy;
 const mongoose = require("mongoose");
 const User = require("../models/User");
-const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 
 module.exports = function (passport) {
 
-  // passport.use(new GoogleStrategy({
-  //   clientID: GOOGLE_CLIENT_ID,
-  //   clientSecret: GOOGLE_CLIENT_SECRET,
-  //   callbackURL: "http://localhost:4000/auth/google/callback"
-  // },
-//   function(accessToken, refreshToken, profile, done) {
-//     // handle user data and authentication
-//   }
-// ));
+
   
   passport.use(
     new LocalStrategy({ usernameField: "email" }, (email, password, done) => {

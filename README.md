@@ -1,6 +1,6 @@
 # City Spaces NYC
  
-Give yourself a sense of purpose, while making New York City communities happy.
+By combining cutting-edge technology with a deep commitment to social impact, our app is revolutionizing the way people engage with their communities and make a difference in the world. Join us today and start making a difference in your community and beyond.
 
 # Key Technologies, Packages, and Gems
 
@@ -29,12 +29,13 @@ Give yourself a sense of purpose, while making New York City communities happy.
 · dotenv <br>
 
 
-## Core Features
-Users will either create an account using an email address and password, or log in to the app via Google account where they can filter through 600+ volunteer opportunities across categories such as health, education, strengthening communities, and environment. <br>
+## Core Features <br>
 
-Users can save the events they would like to attend, and mark the ones they've attended as "complete". <br>
+Our innovative app makes it easy for users to discover and participate in volunteer opportunities across a wide range of categories, including health, education, strengthening communities, and the environment. Whether creating a new account or logging in via Google, users can quickly filter through 600+ events to find the perfect match for their interests and skills. <br>
 
-Once marked complete, the user can faciliate a reflection discussion about the project they completed. Other users may hone in on the conversation by commenting and liking posts. 
+ With the ability to save and track their progress through events, users can easily stay organized and engaged, ensuring they never miss an opportunity to make a difference in their community. And once an event is marked as "complete," users can facilitate a reflection discussion about the project they completed, allowing them to share their experiences and insights with others.<br>
+
+ Our app's unique social features, including the ability to comment and like posts, create a dynamic and engaging community of users who share a passion for volunteerism and social impact. And with robust search and filtering options, users can easily find and connect with like-minded individuals who share their interests and goals. <br>
 
 ## Things To Add
 

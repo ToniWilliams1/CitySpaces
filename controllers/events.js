@@ -49,21 +49,44 @@ res.render('../views/events.ejs', { events: filteredData });
         // const newArray = data.filter(item=> item.recurrence_type === "ongoing")
         // res.render("../views/events.ejs", {arrayOfData: filteredData})
       
+        likeEvent: async (req, res) => {
+          try {
+  const user = await User.findById(req.user._id)
+  user.watching.push(req.params.id, req.params.id);
+  await user.save()
+  req.logIn(user, (err) => {
+    if (err) {
+      return next(err);
+    }
+    res.redirect("/profile");
+
+  });
+  console.log("watching");
+} catch (err) {
+  console.log(err);
+}
+
+
+},
+          
       
 
-      likeEvent: async (req, res) => {
-        try {
-const user = await User.findById(req.user._id)
-          user.watching.push(req.params.id, req.params.title);
-          await user.save()
-          console.log("watching");
-          res.redirect("/profile");
-        } catch (err) {
-          console.log(err);
-        }
+//       likeEvent: async (req, res) => {
+//         try {
+// const user = await User.findById(req.user._id)
+//           user.watching.push(req.params.id, req.params.title);
+//           await user.save()
+//           req.logIn(user, (err) => {
+//             if (err) {
+//               return next(err);
+//             }
+//           res.redirect("/profile");
+//         } catch (err) {
+//           console.log(err);
+//         }
   
  
-      },
+//       },
   }
 
       

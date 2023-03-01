@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
   
+.dashboard{
+  margin-top: 10%;
+}
+
 .sign-up{
   width: 10px;
 }
@@ -40,6 +44,10 @@
   text-decoration: underline;
 }
 
+.mainDiv{
+  margin-top: 10%;
+}
+
 .mr-2{
 font-size: 1.5em;
 margin-left: 5%;
@@ -48,7 +56,7 @@ margin-top: 1.5%;
 margin-bottom: 1.5%;
 }
 
-.navbar, .boxes, .mr-2{
+.navbar, .boxes, .mr-2, h5{
   font-family: 'Nerko One', cursive;
 color: #6A605C ;
 }
@@ -56,6 +64,11 @@ color: #6A605C ;
 .drawer{
   margin-top: 10%;
 
+}
+
+#data {
+  /* style for hidden data */
+  display: none;
 }
 
 .menu{

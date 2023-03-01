@@ -11,7 +11,6 @@ const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
 const commentRoutes = require("./routes/comments");
-const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 
 
@@ -71,25 +70,19 @@ app.use('/', (req, res, next) => {
 app.listen(process.env.PORT, () => {
 	console.log(`Server is running on PORT ${process.env.PORT}, you better catch it!`);
 });
-// app.get('/auth/google',
-//   passport.authenticate('google', { scope: ['profile'] }));
 
-//   app.get('/auth/google/callback',
-//   passport.authenticate('google', { failureRedirect: '/login' }),
-//   function(req, res) {
-//     // Successful authentication, redirect to profile page.
-//     res.redirect('/profile');
-//   });
-
-//   passport.use(new GoogleStrategy({
-//     clientID: GOOGLE_CLIENT_ID,
-//     clientSecret: GOOGLE_CLIENT_SECRET,
-//     callbackURL: "http://localhost:4000/auth/google/callback"
-//   },
-//   function(accessToken, refreshToken, profile, done) {
-//     // handle user data and authentication
- //}
-//));
+app.get('/toggle-data', (req, res) => {
+	// Use a session variable to keep track of the visibility of the data
+	if (req.session.isVisible) {
+	  req.session.isVisible = false;
+	} else {
+	  req.session.isVisible = true;
+	}
+  
+	// Send a JSON response indicating whether the data is currently visible or not
+	res.json({ isVisible: req.session.isVisible });
+  });
+  
 
 
 

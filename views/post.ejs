@@ -74,7 +74,7 @@
     </li>
     <li class="mr-2">
         <a href="/profile" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 ">
-          <i class="fa-solid fa-user"></i> Profile
+          Dashboard
         </a>
     </li>
     <li class="mr-2">
@@ -93,7 +93,7 @@
             <button class="btn btn-success fa fa-heart" type="submit"></button>
           </form>
           <%if(post.likes >= 1)  {%>
-            <p class="likes"><i class="fa fa-heart"> </i> <%=post.likes %>     <br>  <i class="fa-regular fa-comment"></i>
+            <p class="likes"><i class="fa fa-heart"> </i> <%=post.likes %>     <br>  <i class="fa-regular fa-comment"></i> <%=comment.length %>
             </p>
              <%}else {%>
                      <form class="col-1" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
@@ -117,7 +117,7 @@
       </div>
       <div class="container">
         <div class="row justify-content-center mt-5">
-          <h2 class="text-3xl font-bold">Comments:</h2>
+          <h2 class="text-3xl font-bold">Comments</h2>
 
           <ul class="row list-unstyled">
             <% for(var i=0; i< comment.length; i++) {%>

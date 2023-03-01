@@ -1,12 +1,20 @@
 const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Post");
 const Comment = require("../models/Comment");
+const User = require("../models/User");
+const Event = require("../models/Event");
+
 
 module.exports = {
 	getProfile: async (req, res) => {
 		try {
+			const user = await User.findById(req.user._id);
+			const watching = user.watching;
+			console.log(user.watching); // Add this line to check the value of watching
+
 			const posts = await Post.find({ user: req.user.id });
-			res.render("profile.ejs", { posts: posts, user: req.user });
+			res.render("profile.ejs", { posts: posts, user: req.user, watching: watching });
+		
 		} catch (err) {
 			console.log(err);
 		}
