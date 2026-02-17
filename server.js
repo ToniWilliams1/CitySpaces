@@ -62,9 +62,7 @@ app.use("/post", postRoutes);
 app.use("/comments", commentRoutes);
 
 //Assign Route
-app.use('/', (req, res, next) => {
-	res.send('Node.js Search and Filter');
-});
+
 
 //Server Running
 app.listen(process.env.PORT, () => {
